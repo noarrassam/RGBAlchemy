@@ -1,0 +1,106 @@
+.App {
+  text-align: center;
+}
+
+.info-con {
+  margin: 20px;
+}
+
+.info-con .info-label {
+  margin-bottom: 15px;
+}
+
+.info-con .info-target {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.game-container {
+  margin: 0 20px;
+  display: inline-grid;
+  gap: 1px;
+}
+
+.cell-container {
+  width: 28px;
+  height: 28px;
+}
+
+.game-cell {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin: 1px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.game-cell.inner-cell {
+  border-radius: 4px;
+}
+.game-cell.outer-cell {
+  border-radius: 50%;
+  border-color: rgb(200, 200, 200)
+}
+.empty-cell {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.5
+}
+
+.confirmation-box {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: fixed;
+  top: -200px; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  transition: top 0.5s ease-out; 
+}
+
+.confirmation-box.show {
+  top: 20px;
+}
+
+.confirmation-box .msg {
+  font-size: 16px;
+  margin: 0 0 10px;
+  max-width: 500px;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+.confirmation-box button {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 10px;
+  padding: 8px 16px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.confirmation-box button:hover {
+  background-color: #3e8e41;
+}
